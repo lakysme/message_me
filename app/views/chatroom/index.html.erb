@@ -1,14 +1,93 @@
   <body class="bg-blue-200 font-mono">
     <div class="grid mx-auto justify-center">
         <div class="flex justify-center items-center mb-5">
-            <img class="rounded-full w-20 h-20" src="https://t4.ftcdn.net/jpg/04/01/07/17/360_F_401071720_g8sPdNFTrae5tLoLN24DXEt2EDQEKnhq.webp" alt="coffe icon">
+            <img class="rounded-full w-20 h-20 shadow-2xl transition ease-in-out shadow-zinc-700/40 hover:shadow-white/40" src="https://t4.ftcdn.net/jpg/04/01/07/17/360_F_401071720_g8sPdNFTrae5tLoLN24DXEt2EDQEKnhq.webp" alt="coffe icon">
         </div>
-        <div class="inline-flex justify-center items-center mb-24">Say something :)</div>
-        <div class="flex">
-          <div class="columns-2 gap-4 place-content-center">
-              <div class="bg-gray-400 h-auto">Aqui vai o chat</div>
-              <div class="bg-gray-700 h-auto">Aqui vai Users Online</div>
-          </div>
+        <div class="inline-flex justify-center items-center mb-10">Say something :)</div>
+
+        <%# Users %>
+        
+        <div class="grid grid-flow-col auto-cols-max gap-16 pb-28">
+            <div class="w-48 text-sm font-medium text-gray-900 bg-slate-50 border border-gray-200 rounded-lg shadow-2xl shadow-sky-950/40">
+                <a href="#" aria-current="true" class="block w-full px-4 py-2 text-white bg-sky-950 border-b border-gray-200 rounded-t-lg">
+                    Online now
+                </a>
+                <a href="#" class="block w-full px-4 py-2 border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-sky-950 focus:outline-none focus:ring-2 focus:ring-sky-950 focus:text-sky-950 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white">
+                    Settings
+                </a>
+                <a href="#" class="block w-full px-4 py-2 border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-sky-950 focus:outline-none focus:ring-2 focus:ring-sky-950 focus:text-sky-950 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white">
+                    Messages
+                </a>
+                <a href="#" class="block w-full px-4 py-2 rounded-b-lg cursor-pointer hover:bg-gray-100 hover:text-sky-950 focus:outline-none focus:ring-2 focus:ring-sky-950 focus:text-sky-950 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white">
+                    Download
+                </a>
+            </div>
+            <%# Chat box %>
+            <div class="container mx-auto">
+              <div class="max-w-2xl border border-gray-200 rounded-lg bg-slate-50 shadow-2xl shadow-sky-950/40">
+                <div>
+                  <div class="w-full">
+                    <div class="relative w-full p-6 overflow-y-auto h-[40rem]">
+                      <ul class="space-y-2">
+                        <li class="flex justify-start">
+                          <div class="relative max-w-xl px-4 py-2 text-gray-700 rounded shadow">
+                            <span class="block">Hi</span>
+                          </div>
+                        </li>
+                        <li class="flex justify-end">
+                          <div class="relative max-w-xl px-4 py-2 text-gray-700 bg-gray-100 rounded shadow">
+                            <span class="block">Hiiii</span>
+                          </div>
+                        </li>
+                        <li class="flex justify-end">
+                          <div class="relative max-w-xl px-4 py-2 text-gray-700 bg-gray-100 rounded shadow">
+                            <span class="block">how are you?</span>
+                          </div>
+                        </li>
+                        <li class="flex justify-start">
+                          <div class="relative max-w-xl px-4 py-2 text-gray-700 rounded shadow">
+                            <span class="block">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="flex items-center justify-between w-full p-3 border-t border-gray-300">
+                      <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-500" fill="none" viewBox="0 0 24 24"
+                          stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </button>
+                      <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500" fill="none" viewBox="0 0 24 24"
+                          stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />
+                        </svg>
+                      </button>
+                      <input type="text" placeholder="Message"
+                        class="block w-full py-2 pl-4 mx-3 bg-gray-100 rounded-full outline-none focus:text-gray-700"
+                        name="message" required />
+                      <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500" fill="none" viewBox="0 0 24 24"
+                          stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                        </svg>
+                      </button>
+                      <button type="submit">
+                        <svg class="w-5 h-5 text-gray-500 origin-center transform rotate-90" xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20" fill="currentColor">
+                          <path
+                            d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
     </div>
   </body>
