@@ -9,9 +9,9 @@
         
         <div class="grid grid-flow-col auto-cols-max gap-16 pb-28">
             <div class="w-48 text-sm font-medium text-gray-900 bg-slate-50 border border-gray-200 rounded-lg shadow-2xl shadow-sky-950/40">
-                <a href="#" aria-current="true" class="block w-full px-4 py-2 text-white bg-sky-950 border-b border-gray-200 rounded-t-lg">
+                <span class="block w-full px-4 py-2 text-white bg-sky-950 border-b border-gray-200 rounded-t-lg">
                     Online now
-                </a>
+                </span>
                 <a href="#" class="block w-full px-4 py-2 border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-sky-950 focus:outline-none focus:ring-2 focus:ring-sky-950 focus:text-sky-950 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white">
                     Settings
                 </a>
@@ -30,23 +30,8 @@
                     <div class="relative w-full p-6 overflow-y-auto h-[40rem]">
                       <ul class="space-y-2">
                         <li class="flex justify-start">
-                          <div class="relative max-w-xl px-4 py-2 text-gray-700 rounded shadow">
-                            <span class="block">Hi</span>
-                          </div>
-                        </li>
-                        <li class="flex justify-end">
-                          <div class="relative max-w-xl px-4 py-2 text-gray-700 bg-gray-100 rounded shadow">
-                            <span class="block">Hiiii</span>
-                          </div>
-                        </li>
-                        <li class="flex justify-end">
-                          <div class="relative max-w-xl px-4 py-2 text-gray-700 bg-gray-100 rounded shadow">
-                            <span class="block">how are you?</span>
-                          </div>
-                        </li>
-                        <li class="flex justify-start">
-                          <div class="relative max-w-xl px-4 py-2 text-gray-700 rounded shadow">
-                            <span class="block">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </span>
+                          <div>
+                            <%= render @messages %>
                           </div>
                         </li>
                       </ul>
